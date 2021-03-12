@@ -6,13 +6,12 @@ This repository is a mini-tutorial to help you create the sample app for your tu
 
 All projects for raywenderlich.com Flutter tutorials should include the following items:
 
-- com.raywenderlich base package name
+- com.raywenderlich base package name (Android, iOS)
 - Razeware license
 - linting rules
 - a clean pubspec.yaml file
 - splash screen (Android and iOS)
 - app icons for all sizes (Android, iOS, web)
-- base app package name (Android, iOS)
 - display name
 
 The following directions will give further details on how to do that.
