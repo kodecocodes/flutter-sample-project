@@ -1,20 +1,27 @@
 # Flutter sample project
 
-This repository is a mini-tutorial with the resources you need to create the sample project that will accompany your written tutorial.
+This repository is a mini-tutorial to help you create the sample app for your tutorial on raywenderlich.com. The repository here includes the resources you'll need to make your app look good wherever your readers build the app.
 
 ## Sample project requirements
 
 All projects for raywenderlich.com Flutter tutorials should include the following items:
 
-- launch screen (Android and iOS)
+- com.raywenderlich base package name
+- Razeware license
+- linting rules
+- a clean pubspec.yaml file
+- splash screen (Android and iOS)
 - app icons for all sizes (Android, iOS, web)
 - base app package name (Android, iOS)
-- copyright notice
-- linting file
+- display name
 
 The following directions will give further details on how to do that.
 
-## Setup directions
+## General setup
+
+In this section you create your sample app with settings that will apply to all platforms.
+
+### Use the stable channel
 
 Make sure you are on the stable channel with the most recent version of Flutter.
 
@@ -23,19 +30,21 @@ flutter channel stable
 flutter upgrade
 ```
 
-Then create a Flutter project using the base package name for raywenderlich.com. Replace `appname` with your project name.
+### Set the base package name
+
+Next create a Flutter project using the base package name for **raywenderlich.com** in reverse notation. 
 
 ```
 flutter create --org com.raywenderlich appname
 ```
 
-This is used for both the Android package name and the iOS bundle identifier.
+Replace `appname` with your project name. This is used for both the Android package name and the iOS bundle identifier.
 
-### License
+### Add the Razeware license
 
-The guides require adding the license to the top of each code file, but many developers expect to find a file called LICENSE in the root of the project, also. So add that file in your project root. You can find the text for that file in this repository. Change the date to the current year if needed.
+The guides require adding the license to the top of each code file, but many developers expect to find a file called **LICENSE** in the root of the project also. So create that file. You can find the text for the file in this repository. Change the date to the current year if needed.
 
-### Linting rules
+### Set up linting rules
 
 Adding linting rules will help you to follow the Flutter team coding style and just write better code in general.
 
@@ -62,43 +71,39 @@ This will let you know if you are not following the recommendations in the [Effe
 
 ### Update pubspec.yaml
 
-Here is a checklist for things to pay attention to in pubspec.yaml:
+Here is a checklist for things to pay attention to in **pubspec.yaml**:
 
 - Set the app name and description.
-- Set the minimum Dart SDK to 2.12.0 in order to take full advantage of sound null safety. The only reason you wouldn't do this is if your app absolutely requires a package that hasn't been upgraded to null safety.
+- Set the minimum Dart SDK to no lower than 2.12.0 in order to take full advantage of sound null safety. The only reason you wouldn't do this is if your app absolutely requires a package that hasn't been upgraded to null safety.
 - Remove all the default comments.
 
-There is a sample pubspec.yaml file in the root of this repository for your guidance.
+There is a sample **pubspec.yaml** file in the root of this repository for your reference.
 
-### .gitignore
+### Use .gitignore
 
 When you create a new Flutter project it comes with a good `.gitignore` file. Go with what's in there. Also consider this a good list of things not to include when you upload your project to raywenderlich.com. 
 
-**Hint**: If you develop your project with GitHub, all you have to do is download download it from GitHub and that will ensure that there are no unnecessary files in the project.
+**Hint**: If you develop your project with GitHub, all you have to do is download it from GitHub. This is an easy way to ensure that there are no unnecessary files in the project.
+
+### Remove unused folders
+
+If your project doesn't include any tests, then remove the **test** folder. The same is true if you are specifically not supporting some platform. (See the **Web assets** section below.)
 
 ## Image assets
 
-You need to add image assets for each platform that Flutter supports in stable.
+Including image assets in your app makes it look better and feel more polished. You can either create your own or use the standard raywenderlich.com assets.
 
 ### Android assets
 
-You need to add an Android splash screen and launch icon. If you don't have your own custom ones that you are using for the app then you can use the standard raywenderlich.com ones.
-
-To use the standard raywenderlich.com launcher and icons replace the contents of your project's **android/app/src/main/res** folder with the contents of the **android_assets/res** folder in this repository.
-
-Run the app on an Android device or emulator to make sure the launch screen and launcher icon are working correctly.
+On Android you need to add a splash screen and launch icon. To use the raywenderlich.com assets for these, replace the contents of your project's **android/app/src/main/res** folder with the contents of the **android_assets/res** folder in this repository.
 
 ### iOS assets
 
-You also need to add an iOS splash screen and launch icon. To use the standard raywenderlich.com launcher and icons replace the contents of your project's **ios/Runner/Assets.xcassets** folder with the contents of the **ios_assets/Assets.xcassets** folder in this repository.
-
-Run the app on an iOS device or simulator to make sure the launch screen and launcher icon are working correctly. If you don't have a Mac to check this, then mention that on the Trello card so that the TE or FPE can double check.
+You also need to add an iOS splash screen and launch icon. To use the standard raywenderlich.com image assets, replace the contents of your project's **ios/Runner/Assets.xcassets** folder with the contents of the **ios_assets/Assets.xcassets** folder in this repository.
 
 ### Web assets
 
-You should also add a favicon and other asset images for the web. To use the standard raywenderlich.com asset images go to your project's **web** folder and replace **favicon.png** and the contents of the **icons** folder with the image assets found in the **web_assets** folder in this repository.
-
-Run the Flutter web app in a browser to make sure that the favicon shows in the browser tab at the top.
+You should also add a favicon and other asset images for the web. To use the standard raywenderlich.com asset images, go to your project's **web** folder and replace **favicon.png** and the contents of the **icons** folder with the image assets found in the **web_assets** folder in this repository.
 
 **Note**: If your project does not support the web, then delete the entire **web** folder.
 
@@ -115,7 +120,7 @@ Open **AndroidManifest.xml** in **android/app/src/main** and set the app display
      android:label="Super App"
 ```
 
-This name will appear under the app's launch icon on the user's Android device.
+This name will appear under the app's launcher icon on the user's Android device.
 
 ### iOS
 
@@ -127,7 +132,7 @@ Open **Info.plist** in **ios/Runner** and set the app display name by editing th
 	<string>Super App</string>
 ```
 
-This name will appear under the app's launch icon on the user's iOS device.
+This name will appear under the app's launcher icon on the user's iOS device.
 
 ### Web
 
@@ -138,10 +143,16 @@ Open **index.html** in the **web** folder of your project root. Then set the dis
   <title>Super App</title>
 ```
 
-This will change the display name used in the pages browser tab next to the favicon.
+This will change the display name used in the page's browser tab next to the favicon.
 
-## Further notes
+## Testing it out
 
-This guide is up to date for Flutter 2.0. When desktop versions enter the stable channel without the need for any special flags, then the required resources should be added for them as well.
+Run the app on an Android and iOS device or emulator/simulator to make sure the splash screen, launcher icon and app name display correctly. If you don't have a Mac, then mention that on the Trello card so that the TE or FPE can double check the iOS version.
+
+Run the Flutter web app in a browser to make sure that the favicon and app name show on the browser tab.
+
+## Future changes
+
+This guide is up to date for Flutter 2.0. When desktop versions enter the stable channel without the need for any special flags, the required resources should be added for them as well.
 
 Are there new Flutter updates that break this guide? Please open a GitHub issue or submit a pull request.
