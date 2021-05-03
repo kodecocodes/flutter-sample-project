@@ -8,11 +8,11 @@ All projects for raywenderlich.com Flutter tutorials should include the followin
 
 - com.raywenderlich base package name (Android, iOS)
 - Razeware license
-- linting rules
-- a clean pubspec.yaml file
-- splash screen (Android and iOS)
-- app icons for all sizes (Android, iOS, web)
-- display name
+- Flutter team linting rules
+- A clean **pubspec.yaml** file
+- Splash screen (Android and iOS)
+- App icons for all sizes (Android, iOS, web)
+- App display name
 
 The following directions will give further details on how to do that.
 
@@ -22,7 +22,7 @@ In this section you create your sample app with settings that will apply to all 
 
 ### Use the stable channel
 
-Make sure you are on the stable channel with the most recent version of Flutter.
+Make sure you're on the stable channel with the most recent version of Flutter.
 
 ```
 flutter channel stable
@@ -41,7 +41,7 @@ Replace `appname` with your project name. This is used for both the Android pack
 
 ### Add the Razeware license
 
-The guides require adding the license to the top of each code file, but many developers expect to find a file called **LICENSE** in the root of the project also. So create that file. You can find the text for the file in this repository. Change the date to the current year if needed.
+The guides require adding the license to the top of each code file, but many developers expect to find a file called **LICENSE** in the root of the project also. So create that file. You can find the [text for the file in this repository](https://github.com/raywenderlich/flutter-sample-project/blob/master/LICENSE). Change the date to the current year if needed.
 
 ### Set up linting rules
 
@@ -54,26 +54,16 @@ dev_dependencies:
   effective_dart: ^1.0.0
 ```
 
-Also add a file named **analysis_options.yaml** to the root of your project. Paste in the following options:
+Also add a file named **analysis_options.yaml** to the root of your project. Paste in the [Fluter Team linting rules](https://github.com/raywenderlich/flutter-sample-project/blob/master/analysis_options.yaml), which you can find in the root of this repository. They contain most of [Effective Dart](https://dart.dev/guides/language/effective-dart) as well as some additional rules specific to publishing code on the web.
 
-```
-include: package:effective_dart/analysis_options.yaml
-
-analyzer:
-  exclude: [build/**]
-  strong-mode:
-    implicit-casts: false
-    implicit-dynamic: false
-```
-
-This will let you know if you are not following the recommendations in the [Effective Dart](https://dart.dev/guides/language/effective-dart) guidelines.
+These linting rules will let your IDE give you warnings or errors if you aren't following the Flutter Team's coding style. This also means that you should fix all of the IDE warnings and errors before you submit your sample app.
 
 ### Update pubspec.yaml
 
 Here is a checklist for things to pay attention to in **pubspec.yaml**:
 
 - Set the app name and description.
-- Set the minimum Dart SDK to no lower than 2.12.0 in order to take full advantage of sound null safety. The only reason you wouldn't do this is if your app absolutely requires a package that hasn't been upgraded to null safety.
+- Set the minimum Dart SDK to no lower than `2.12.0` in order to take full advantage of sound null safety. The only reason you wouldn't do this is if your app absolutely requires a package that hasn't been upgraded to null safety.
 - Remove all the default comments.
 
 There is a sample **pubspec.yaml** file in the root of this repository for your reference.
@@ -82,11 +72,11 @@ There is a sample **pubspec.yaml** file in the root of this repository for your 
 
 When you create a new Flutter project it comes with a good `.gitignore` file. Go with what's in there. Also consider this a good list of things not to include when you upload your project to raywenderlich.com. 
 
-**Hint**: If you develop your project with GitHub, all you have to do is download it from GitHub. This is an easy way to ensure that there are no unnecessary files in the project.
+**Hint**: If you develop your project with GitHub, all you have to do is download it from GitHub before uploading it to raywenderlich.com. This is an easy way to ensure that there are no unnecessary files in the project.
 
 ### Remove unused folders
 
-If your project doesn't include any tests, then remove the **test** folder. The same is true if you are specifically not supporting some platform. (See the **Web assets** section below.)
+If your project doesn't include any tests, then remove the **test** folder. The same is true for platform folders if you are specifically not supporting that platform. (See the **Web assets** section below.)
 
 ## Image assets
 
