@@ -51,7 +51,7 @@ In **pubspec.yaml** add `effective_dart` to the dev dependencies:
 
 ```
 dev_dependencies:
-  effective_dart: ^1.0.0
+  effective_dart: ^1.3.1
 ```
 
 Also add a file named **analysis_options.yaml** to the root of your project. Paste in the [Fluter Team linting rules](https://github.com/raywenderlich/flutter-sample-project/blob/master/analysis_options.yaml), which you can find in the root of this repository. They contain most of [Effective Dart](https://dart.dev/guides/language/effective-dart) as well as some additional rules specific to publishing code on the web.
