@@ -84,7 +84,7 @@ Including image assets in your app makes it look better and feel more polished. 
 
 ### Android assets
 
-On Android you need to add a splash screen and launch icon. To use the raywenderlich.com assets for these, replace the contents of your project's **android/app/src/main/res** folder with the contents of the **android_assets/res** folder in this repository. Then open **AndroidManifest.xml** in **android/app/src/main**. Locate and delete the `<meta-data>`:
+On Android you need to add a splash screen and launch icon. To use the raywenderlich.com assets for these, replace the contents of your project's **android/app/src/main/res** folder with the contents of the **android_assets/res** folder in this repository. Then open **AndroidManifest.xml** in **android/app/src/main**. Locate and delete the `<meta-data>` subelement:
 
 ```
 <!-- Specifies an Android theme to apply to this Activity as soon as
@@ -97,7 +97,7 @@ On Android you need to add a splash screen and launch icon. To use the raywender
   />
 ```
 
-This will get rid of the error `AAPT: error: resource style/NormalTheme not found` when building the android app.
+This will get rid of the error `AAPT: error: resource style/NormalTheme not found` when building the android app. Since the repository version of file **styles.xml** does not contain the style `NormalTheme`.
 
 ### iOS assets
 
