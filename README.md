@@ -47,7 +47,7 @@ The guides require adding the license to the top of each code file, but many dev
 
 Adding linting rules will help you to follow the Flutter team coding style and just write better code in general.
 
-Add a file named **analysis_options.yaml** to the root of your project. Paste in the [Fluter Team linting rules](https://github.com/raywenderlich/flutter-sample-project/blob/master/analysis_options.yaml), which you can find in the root of this repository.
+Add a file named **analysis_options.yaml** to the root of your project. Paste in the [Flutter Team linting rules](https://github.com/raywenderlich/flutter-sample-project/blob/master/analysis_options.yaml), which you can find in the root of this repository.
 
 These linting rules will let your IDE give you warnings or errors if you aren't following the Flutter Team's coding style. This also means that you should fix all of the IDE warnings and errors before you submit your sample app.
 
