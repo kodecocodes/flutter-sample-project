@@ -1,13 +1,13 @@
 # Flutter sample project
 
-This repository is a mini-tutorial to help you create the sample app for your tutorial on raywenderlich.com. The repository here includes the resources you'll need to make your app look good wherever your readers build the app.
+This repository is a mini-tutorial to help you create the sample app for your tutorial on kodeco.com. The repository here includes the resources you'll need to make your app look good wherever your readers build the app.
 
 ## Sample project requirements
 
-All projects for raywenderlich.com Flutter tutorials should include the following items:
+All projects for kodeco.com Flutter tutorials should include the following items:
 
-- com.raywenderlich base package name (Android, iOS)
-- Razeware license
+- com.kodeco base package name (Android, iOS)
+- Kodeco license
 - Flutter team linting rules
 - A clean **pubspec.yaml** file
 - Splash screen (Android and iOS)
@@ -31,15 +31,15 @@ flutter upgrade
 
 ### Set the base package name
 
-Next create a Flutter project using the base package name for **raywenderlich.com** in reverse notation. 
+Next create a Flutter project using the base package name for **kodeco.com** in reverse notation. 
 
 ```
-flutter create --org com.raywenderlich appname
+flutter create --org com.kodeco appname
 ```
 
 Replace `appname` with your project name. This is used for both the Android package name and the iOS bundle identifier.
 
-### Add the Razeware license
+### Add the Kodeco license
 
 The guides require adding the license to the top of each code file, but many developers expect to find a file called **LICENSE** in the root of the project also. So create that file. You can find the [text for the file in this repository](https://github.com/raywenderlich/flutter-sample-project/blob/master/LICENSE). Change the date to the current year if needed.
 
@@ -63,9 +63,9 @@ There is a sample **pubspec.yaml** file in the root of this repository for your 
 
 ### Use .gitignore
 
-When you create a new Flutter project it comes with a good `.gitignore` file. Go with what's in there. Also consider this a good list of things not to include when you upload your project to raywenderlich.com. 
+When you create a new Flutter project it comes with a good `.gitignore` file. Go with what's in there. Also consider this a good list of things not to include when you upload your project to kodeco.com. 
 
-**Hint**: If you develop your project with GitHub, all you have to do is download it from GitHub before uploading it to raywenderlich.com. This is an easy way to ensure that there are no unnecessary files in the project.
+**Hint**: If you develop your project with GitHub, all you have to do is download it from GitHub before uploading it to kodeco.com. This is an easy way to ensure that there are no unnecessary files in the project.
 
 ### Remove unused folders
 
@@ -73,19 +73,19 @@ If your project doesn't include any tests, then remove the **test** folder. The 
 
 ## Image assets
 
-Including image assets in your app makes it look better and feel more polished. You can either create your own or use the standard raywenderlich.com assets.
+Including image assets in your app makes it look better and feel more polished. You can either create your own or use the standard kodeco.com assets.
 
 ### Android assets
 
-On Android you need to add a splash screen and launch icon. To use the raywenderlich.com assets for these, replace the contents of your project's **android/app/src/main/res** folder with the contents of the **android_assets/res** folder in this repository.
+On Android you need to add a splash screen and launch icon. To use the kodeco.com assets for these, replace the contents of your project's **android/app/src/main/res** folder with the contents of the **android_assets/res** folder in this repository.
 
 ### iOS assets
 
-You also need to add an iOS splash screen and launch icon. To use the standard raywenderlich.com image assets, replace the contents of your project's **ios/Runner/Assets.xcassets** folder with the contents of the **ios_assets/Assets.xcassets** folder in this repository.
+You also need to add an iOS splash screen and launch icon. To use the standard kodeco.com image assets, replace the contents of your project's **ios/Runner/Assets.xcassets** folder with the contents of the **ios_assets/Assets.xcassets** folder in this repository.
 
 ### Web assets
 
-You should also add a favicon and other asset images for the web. To use the standard raywenderlich.com asset images, go to your project's **web** folder and replace **favicon.png** and the contents of the **icons** folder with the image assets found in the **web_assets** folder in this repository.
+You should also add a favicon and other asset images for the web. To use the standard kodeco.com asset images, go to your project's **web** folder and replace **favicon.png** and the contents of the **icons** folder with the image assets found in the **web_assets** folder in this repository.
 
 **Note**: If your project does not support the web, then delete the entire **web** folder.
 
